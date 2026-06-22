@@ -1,63 +1,7 @@
 [
   {
-    "nombre": "Ermita del Rocío (La Aldea)",
-    "descripcion": "Destino final de la romería. La Aldea del Rocío acoge a cientos de miles de peregrinos cada año en torno a la festividad de Pentecostés.",
-    "latitud": 36.9253,
-    "longitud": -6.4826,
-    "ordenEnCamino": 100,
-    "tipo": "ENTRADA_ALDEA"
-  },
-  {
-    "nombre": "Vado del Quema",
-    "descripcion": "Paso del río Quema, uno de los momentos más emblemáticos y fotogénicos del camino de la Hermandad de Sevilla.",
-    "latitud": 37.2821,
-    "longitud": -6.2147,
-    "ordenEnCamino": 40,
-    "tipo": "VADO"
-  },
-  {
-    "nombre": "Villamanrique de la Condesa",
-    "descripcion": "Municipio sevillano del Parque Nacional de Doñana, importante punto de descanso en el camino.",
-    "latitud": 37.2500,
-    "longitud": -6.3167,
-    "ordenEnCamino": 50,
-    "tipo": "DESCANSO"
-  },
-  {
-    "nombre": "Vado del Guadiamar",
-    "descripcion": "Cruce del río Guadiamar, en la ruta de varias hermandades que parten de la provincia de Sevilla.",
-    "latitud": 37.1981,
-    "longitud": -6.3512,
-    "ordenEnCamino": 60,
-    "tipo": "VADO"
-  },
-  {
-    "nombre": "El Chaparral",
-    "descripcion": "Zona de descanso en el Parque Nacional de Doñana, caracterizada por su vegetación de matorral mediterráneo.",
-    "latitud": 37.1200,
-    "longitud": -6.4100,
-    "ordenEnCamino": 70,
-    "tipo": "DESCANSO"
-  },
-  {
-    "nombre": "Marismas del Guadalquivir",
-    "descripcion": "Tramo de camino que bordea las marismas, con una fauna y paisaje únicos en Europa.",
-    "latitud": 37.0500,
-    "longitud": -6.4500,
-    "ordenEnCamino": 80,
-    "tipo": "HITO"
-  },
-  {
-    "nombre": "Puente del Ajolí",
-    "descripcion": "Pequeño puente en la entrada al término de Almonte, último hito antes de llegar a la aldea.",
-    "latitud": 36.9600,
-    "longitud": -6.4700,
-    "ordenEnCamino": 90,
-    "tipo": "HITO"
-  },
-  {
     "nombre": "Salida de Sanlúcar de Barrameda",
-    "descripcion": "Las hermandades de la orilla gaditana parten desde Sanlúcar cruzando en barca el Guadalquivir.",
+    "descripcion": "Las hermandades de la orilla gaditana parten desde Sanlúcar cruzando en barca el Guadalquivir hacia el Parque de Doñana.",
     "latitud": 36.7784,
     "longitud": -6.3532,
     "ordenEnCamino": 10,
@@ -65,18 +9,74 @@
   },
   {
     "nombre": "Bajo de Guía",
-    "descripcion": "Embarcadero en Sanlúcar donde las hermandades gaditanas cruzan en barca el río Guadalquivir para acceder al camino.",
-    "latitud": 36.7900,
-    "longitud": -6.3600,
+    "descripcion": "Embarcadero histórico de Sanlúcar desde donde las hermandades gaditanas cruzan el Guadalquivir en barca para entrar en Doñana.",
+    "latitud": 36.7947,
+    "longitud": -6.3514,
     "ordenEnCamino": 15,
     "tipo": "HITO"
   },
   {
     "nombre": "La Plancha",
-    "descripcion": "Primer punto de acampada dentro del Parque Nacional de Doñana para las hermandades que cruzan el Guadalquivir.",
-    "latitud": 36.9100,
-    "longitud": -6.4200,
+    "descripcion": "Primer punto de acampada dentro del Parque Nacional de Doñana para las hermandades que cruzan el Guadalquivir desde Sanlúcar.",
+    "latitud": 36.9500,
+    "longitud": -6.4100,
     "ordenEnCamino": 20,
     "tipo": "DESCANSO"
+  },
+  {
+    "nombre": "Vado del Quema",
+    "descripcion": "Paso del arroyo del Quema, uno de los momentos más emblemáticos del camino de las hermandades que llegan desde Sevilla.",
+    "latitud": 37.2200,
+    "longitud": -6.2800,
+    "ordenEnCamino": 40,
+    "tipo": "VADO"
+  },
+  {
+    "nombre": "Villamanrique de la Condesa",
+    "descripcion": "Municipio sevillano en el entorno del Parque Nacional de Doñana. Punto de descanso y encuentro de varias hermandades en el camino.",
+    "latitud": 37.2500,
+    "longitud": -6.3167,
+    "ordenEnCamino": 50,
+    "tipo": "DESCANSO"
+  },
+  {
+    "nombre": "Vado del Guadiamar",
+    "descripcion": "Cruce del río Guadiamar, en la ruta de las hermandades que parten de la provincia de Sevilla hacia el Rocío.",
+    "latitud": 37.2100,
+    "longitud": -6.3300,
+    "ordenEnCamino": 60,
+    "tipo": "VADO"
+  },
+  {
+    "nombre": "El Chaparral",
+    "descripcion": "Zona de descanso dentro del Parque Nacional de Doñana, caracterizada por su matorral mediterráneo y su fauna.",
+    "latitud": 37.1650,
+    "longitud": -6.3900,
+    "ordenEnCamino": 70,
+    "tipo": "DESCANSO"
+  },
+  {
+    "nombre": "Caño Martín Rufo",
+    "descripcion": "Paso de uno de los caños de las marismas de Doñana, tramo de gran belleza paisajística en el camino hacia la Aldea.",
+    "latitud": 37.1300,
+    "longitud": -6.4400,
+    "ordenEnCamino": 80,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "Puente del Ajolí",
+    "descripcion": "Puente sobre el arroyo del Ajolí, uno de los últimos hitos del camino antes de entrar en la Aldea del Rocío.",
+    "latitud": 37.1100,
+    "longitud": -6.4700,
+    "ordenEnCamino": 90,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "Ermita del Rocío (La Aldea)",
+    "descripcion": "Destino final de la romería. La Aldea del Rocío acoge a cientos de miles de peregrinos cada año en torno a la festividad de Pentecostés.",
+    "latitud": 37.1228,
+    "longitud": -6.4875,
+    "ordenEnCamino": 100,
+    "tipo": "ENTRADA_ALDEA"
   }
 ]
