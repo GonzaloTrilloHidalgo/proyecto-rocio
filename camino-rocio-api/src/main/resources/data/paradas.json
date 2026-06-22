@@ -26,8 +26,8 @@
   {
     "nombre": "Vado del Quema",
     "descripcion": "Paso del arroyo del Quema, uno de los momentos más emblemáticos del camino de las hermandades que llegan desde Sevilla.",
-    "latitud": 37.2200,
-    "longitud": -6.2800,
+    "latitud": 37.24452027611518,
+    "longitud": -6.2651471595505885,
     "ordenEnCamino": 40,
     "tipo": "VADO"
   },
@@ -50,8 +50,8 @@
   {
     "nombre": "El Chaparral",
     "descripcion": "Zona de descanso dentro del Parque Nacional de Doñana, caracterizada por su matorral mediterráneo y su fauna.",
-    "latitud": 37.1650,
-    "longitud": -6.3900,
+    "latitud": 37.25907342026297,
+    "longitud": -6.5143337018781535,
     "ordenEnCamino": 70,
     "tipo": "DESCANSO"
   },
@@ -66,16 +66,16 @@
   {
     "nombre": "Puente del Ajolí",
     "descripcion": "Puente sobre el arroyo del Ajolí, uno de los últimos hitos del camino antes de entrar en la Aldea del Rocío.",
-    "latitud": 37.1100,
-    "longitud": -6.4700,
+    "latitud": 37.134200391299395,
+    "longitud": -6.464271917227689,
     "ordenEnCamino": 90,
     "tipo": "HITO"
   },
   {
     "nombre": "Ermita del Rocío (La Aldea)",
     "descripcion": "Destino final de la romería. La Aldea del Rocío acoge a cientos de miles de peregrinos cada año en torno a la festividad de Pentecostés.",
-    "latitud": 37.1228,
-    "longitud": -6.4875,
+    "latitud": 37.13064909390341,
+    "longitud": -6.48505942718488,
     "ordenEnCamino": 100,
     "tipo": "ENTRADA_ALDEA"
   }
