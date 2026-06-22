@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { api } from '../../lib/api';
+import type { Hermandad } from '../../lib/api';
+
+export async function getStaticPaths() {
+  try {
+    const hermandades = await api.hermandades();
+    return hermandades.map((h: Hermandad) => ({
+      params: { id: String(h.id) },
+      props: { hermandad: h },
+    }));
+  } catch {
+    return [];
+  }
+}
+
+const { hermandad } = Astro.props as { hermandad: Hermandad };
+---
+
+<BaseLayout
+  title={hermandad.nombre}
+  description={`Ficha de la ${hermandad.nombre}. Hermandad ${hermandad.categoria.toLowerCase()} del Rocío.`}
+>
+  <div class="container page">
+    <nav class="breadcrumb">
+      <a href="/hermandades">← Hermandades</a>
+    </nav>
+
+    <article class="ficha">
+      <header class="ficha-header">
+        {hermandad.numeroOrden && <span class="orden">Orden #{hermandad.numeroOrden}</span>}
+        <h1>{hermandad.nombre}</h1>
+        <span class="badge {hermandad.categoria.toLowerCase()}">{hermandad.categoria}</span>
+      </header>
+
+      <dl class="datos">
+        {hermandad.localidad && (
+          <div>
+            <dt>Localidad</dt>
+            <dd>{hermandad.localidad}{hermandad.provincia ? `, ${hermandad.provincia}` : ''}</dd>
+          </div>
+        )}
+        {hermandad.anioFundacion && (
+          <div>
+            <dt>Fundación</dt>
+            <dd>{hermandad.anioFundacion}</dd>
+          </div>
+        )}
+        {hermandad.madrina && (
+          <div>
+            <dt>Madrina</dt>
+            <dd>{hermandad.madrina}</dd>
+          </div>
+        )}
+        {hermandad.web && (
+          <div>
+            <dt>Web oficial</dt>
+            <dd><a href={hermandad.web} target="_blank" rel="noopener">{hermandad.web}</a></dd>
+          </div>
+        )}
+        {hermandad.latitud && hermandad.longitud && (
+          <div>
+            <dt>Coordenadas</dt>
+            <dd>{hermandad.latitud.toFixed(4)}, {hermandad.longitud.toFixed(4)}</dd>
+          </div>
+        )}
+      </dl>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .ficha {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem 2.5rem;
+    box-shadow: var(--shadow);
+    max-width: 680px;
+  }
+
+  .ficha-header {
+    margin-bottom: 2rem;
+  }
+
+  .orden {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .ficha-header h1 {
+    font-size: 1.8rem;
+    margin: 0.3rem 0 0.5rem;
+  }
+
+  .datos {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .datos > div {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .datos > div:last-child {
+    border-bottom: none;
+  }
+
+  dt {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding-top: 0.1rem;
+  }
+
+  dd {
+    font-size: 0.95rem;
+  }
+
+  .badge.filial   { background: var(--color-primary); color: #fff; }
+  .badge.agregada { background: #5a7fa0; color: #fff; }
+  .badge.culto    { background: #6a8a5a; color: #fff; }
+</style>

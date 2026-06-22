@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Countdown from '../components/Countdown.svelte';
+---
+
+<BaseLayout title="Inicio" description="Guía completa de la Romería de El Rocío: hermandades filiales, camino y fechas.">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Camino al Rocío</h1>
+      <p class="hero-sub">La guía de la Romería más grande del mundo</p>
+      <Countdown client:load />
+      <div class="hero-ctas">
+        <a href="/hermandades" class="btn-primary">Ver hermandades</a>
+        <a href="/camino" class="btn-outline">El camino</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container features">
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon">⛪</div>
+        <h2>Hermandades</h2>
+        <p>Directorio completo de hermandades filiales, con información de su origen, provincia y orden de antigüedad.</p>
+        <a href="/hermandades">Explorar directorio →</a>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h2>El Camino</h2>
+        <p>Mapa interactivo con todas las paradas, vados e hitos del camino hasta la Aldea del Rocío.</p>
+        <a href="/camino">Ver el mapa →</a>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">📜</div>
+        <h2>La Romería</h2>
+        <p>Historia, tradición y curiosidades de una de las peregrinaciones más antiguas y multitudinarias de España.</p>
+        <a href="/sobre-la-romeria">Saber más →</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #5a0f0f 100%);
+    color: #fff;
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  .btn-primary, .btn-outline {
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.15s;
+  }
+
+  .btn-primary {
+    background: var(--color-gold);
+    color: #fff;
+  }
+
+  .btn-outline {
+    border: 2px solid rgba(255,255,255,0.6);
+    color: #fff;
+  }
+
+  .btn-primary:hover, .btn-outline:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  .features {
+    padding: 4rem 1.5rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+</style>

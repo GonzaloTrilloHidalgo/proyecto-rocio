@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Mapa from '../components/Mapa.svelte';
+import { api } from '../lib/api';
+import type { Parada } from '../lib/api';
+
+let paradas: Parada[] = [];
+try {
+  paradas = await api.paradas();
+} catch {
+  // API no disponible en build
+}
+
+const TIPO_LABEL: Record<string, string> = {
+  VADO: 'Vado',
+  DESCANSO: 'Zona de descanso',
+  HITO: 'Hito del camino',
+  ENTRADA_ALDEA: 'Entrada a la Aldea',
+};
+---
+
+<BaseLayout title="El Camino" description="Mapa interactivo de las paradas e hitos del camino al Rocío.">
+  <div class="container page">
+    <header class="page-header">
+      <h1>El Camino</h1>
+      <p>Paradas, vados e hitos del recorrido hacia la Aldea del Rocío.</p>
+    </header>
+
+    <Mapa client:load paradas={paradas} />
+
+    {paradas.length > 0 && (
+      <section class="leyenda">
+        <h2>Paradas ({paradas.length})</h2>
+        <ul>
+          {paradas.map(p => (
+            <li>
+              <strong>{p.nombre}</strong>
+              <span class={`tipo tipo-${p.tipo.toLowerCase()}`}>{TIPO_LABEL[p.tipo]}</span>
+              {p.descripcion && <p>{p.descripcion}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header h1 { font-size: 2rem; margin-bottom: 0.3rem; }
+  .page-header p  { color: var(--color-muted); }
+
+  .leyenda {
+    margin-top: 2.5rem;
+  }
+
+  .leyenda h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .leyenda ul {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .leyenda li {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .leyenda li strong {
+    font-size: 0.95rem;
+  }
+
+  .leyenda li p {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-top: 0.2rem;
+  }
+
+  .tipo {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+    width: fit-content;
+  }
+
+  .tipo-vado         { background: #dbeeff; color: #1a6fa8; }
+  .tipo-descanso     { background: #ddf0da; color: #3a6a30; }
+  .tipo-hito         { background: #fdf3d8; color: #9a7a20; }
+  .tipo-entrada_aldea { background: #fde8e8; color: var(--color-primary); }
+</style>

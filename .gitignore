@@ -1,0 +1,22 @@
+# ===== Backend (Maven / Spring Boot) =====
+camino-rocio-api/target/
+camino-rocio-api/.mvn/wrapper/maven-wrapper.jar
+camino-rocio-api/*.iml
+camino-rocio-api/.idea/
+
+# ===== Frontend (Node / Astro) =====
+camino-rocio-web/node_modules/
+camino-rocio-web/dist/
+camino-rocio-web/.astro/
+camino-rocio-web/.env
+camino-rocio-web/.env.local
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== IDEs =====
+.idea/
+.vscode/settings.json
+*.swp
+*.swo

@@ -1,0 +1,82 @@
+[
+  {
+    "nombre": "Ermita del Rocío (La Aldea)",
+    "descripcion": "Destino final de la romería. La Aldea del Rocío acoge a cientos de miles de peregrinos cada año en torno a la festividad de Pentecostés.",
+    "latitud": 36.9253,
+    "longitud": -6.4826,
+    "ordenEnCamino": 100,
+    "tipo": "ENTRADA_ALDEA"
+  },
+  {
+    "nombre": "Vado del Quema",
+    "descripcion": "Paso del río Quema, uno de los momentos más emblemáticos y fotogénicos del camino de la Hermandad de Sevilla.",
+    "latitud": 37.2821,
+    "longitud": -6.2147,
+    "ordenEnCamino": 40,
+    "tipo": "VADO"
+  },
+  {
+    "nombre": "Villamanrique de la Condesa",
+    "descripcion": "Municipio sevillano del Parque Nacional de Doñana, importante punto de descanso en el camino.",
+    "latitud": 37.2500,
+    "longitud": -6.3167,
+    "ordenEnCamino": 50,
+    "tipo": "DESCANSO"
+  },
+  {
+    "nombre": "Vado del Guadiamar",
+    "descripcion": "Cruce del río Guadiamar, en la ruta de varias hermandades que parten de la provincia de Sevilla.",
+    "latitud": 37.1981,
+    "longitud": -6.3512,
+    "ordenEnCamino": 60,
+    "tipo": "VADO"
+  },
+  {
+    "nombre": "El Chaparral",
+    "descripcion": "Zona de descanso en el Parque Nacional de Doñana, caracterizada por su vegetación de matorral mediterráneo.",
+    "latitud": 37.1200,
+    "longitud": -6.4100,
+    "ordenEnCamino": 70,
+    "tipo": "DESCANSO"
+  },
+  {
+    "nombre": "Marismas del Guadalquivir",
+    "descripcion": "Tramo de camino que bordea las marismas, con una fauna y paisaje únicos en Europa.",
+    "latitud": 37.0500,
+    "longitud": -6.4500,
+    "ordenEnCamino": 80,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "Puente del Ajolí",
+    "descripcion": "Pequeño puente en la entrada al término de Almonte, último hito antes de llegar a la aldea.",
+    "latitud": 36.9600,
+    "longitud": -6.4700,
+    "ordenEnCamino": 90,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "Salida de Sanlúcar de Barrameda",
+    "descripcion": "Las hermandades de la orilla gaditana parten desde Sanlúcar cruzando en barca el Guadalquivir.",
+    "latitud": 36.7784,
+    "longitud": -6.3532,
+    "ordenEnCamino": 10,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "Bajo de Guía",
+    "descripcion": "Embarcadero en Sanlúcar donde las hermandades gaditanas cruzan en barca el río Guadalquivir para acceder al camino.",
+    "latitud": 36.7900,
+    "longitud": -6.3600,
+    "ordenEnCamino": 15,
+    "tipo": "HITO"
+  },
+  {
+    "nombre": "La Plancha",
+    "descripcion": "Primer punto de acampada dentro del Parque Nacional de Doñana para las hermandades que cruzan el Guadalquivir.",
+    "latitud": 36.9100,
+    "longitud": -6.4200,
+    "ordenEnCamino": 20,
+    "tipo": "DESCANSO"
+  }
+]

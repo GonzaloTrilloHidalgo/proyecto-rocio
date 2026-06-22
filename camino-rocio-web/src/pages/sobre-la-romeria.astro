@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sobre la Romería"
+  description="Historia y tradición de la Romería de El Rocío, una de las peregrinaciones más grandes del mundo."
+>
+  <div class="container page">
+    <header class="page-header">
+      <h1>La Romería del Rocío</h1>
+      <p class="subtitulo">Historia, tradición y devoción en torno a la Blanca Paloma</p>
+    </header>
+
+    <article class="contenido">
+      <h2>¿Qué es el Rocío?</h2>
+      <p>
+        La Romería de El Rocío es una peregrinación católica que se celebra anualmente en la Aldea del Rocío,
+        en el municipio de Almonte (Huelva). Cada año, en torno a la festividad de Pentecostés,
+        cientos de miles de romeros se acercan a venerar a la Virgen del Rocío, conocida popularmente
+        como la <strong>Blanca Paloma</strong>.
+      </p>
+
+      <h2>Historia</h2>
+      <p>
+        Los orígenes de la devoción al Rocío se remontan al siglo XIII, según la tradición, cuando
+        un cazador de Almonte encontró una imagen de la Virgen en el tronco de un árbol en las marismas.
+        La primera hermandad documentada es la Matriz de Almonte, que data del siglo XVI.
+      </p>
+      <p>
+        Durante los siglos XIX y XX el número de hermandades filiales creció exponencialmente,
+        extendiéndose por toda España y el extranjero. Hoy son más de 127 las hermandades reconocidas.
+      </p>
+
+      <h2>El Camino</h2>
+      <p>
+        Cada hermandad tiene su propio camino hasta la aldea, recorrido a pie, a caballo o en carreta
+        durante varios días. Las más antiguas parten desde Almonte, Sanlúcar de Barrameda o Sevilla.
+        El tramo más emblemático cruza el Parque Nacional de Doñana, declarado Patrimonio de la Humanidad.
+      </p>
+
+      <h2>Las fechas: Pentecostés y el Computus</h2>
+      <p>
+        La romería se celebra en torno al <strong>Domingo de Pentecostés</strong>, que cae 49 días
+        después del Domingo de Resurrección (Pascua). La fecha de la Pascua se calcula cada año
+        mediante el <em>Computus</em>, un algoritmo astronómico basado en los ciclos solares y lunares.
+        Por eso la romería no cae en la misma fecha cada año, sino que puede variar entre finales de
+        mayo y principios de junio.
+      </p>
+
+      <h2>Glosario rápido</h2>
+      <dl class="glosario">
+        <div>
+          <dt>Hermandad filial</dt>
+          <dd>Asociación de fieles reconocida por la Hermandad Matriz de Almonte que peregrina al Rocío.</dd>
+        </div>
+        <div>
+          <dt>Simpecado</dt>
+          <dd>Insignia o estandarte que encabeza la marcha de cada hermandad.</dd>
+        </div>
+        <div>
+          <dt>Carreta</dt>
+          <dd>Carro tradicional tirado por bueyes en el que viajan los enseres y parte de los romeros.</dd>
+        </div>
+        <div>
+          <dt>Aldea del Rocío</dt>
+          <dd>Pequeña aldea en el término de Almonte que alberga el santuario de la Virgen del Rocío.</dd>
+        </div>
+        <div>
+          <dt>La Blanca Paloma</dt>
+          <dd>Apelativo popular de la Virgen del Rocío, patrona de Almonte.</dd>
+        </div>
+      </dl>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 2.5rem 1.5rem 4rem;
+    max-width: 780px;
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitulo {
+    color: var(--color-muted);
+    font-size: 1.05rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0 0.75rem;
+    color: var(--color-primary);
+  }
+
+  .contenido p {
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .glosario {
+    margin-top: 0.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .glosario > div {
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-gold);
+    background: #fff;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .glosario dt {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .glosario dd {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+</style>
